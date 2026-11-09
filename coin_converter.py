@@ -11,7 +11,7 @@ CENTS_PER_NICKEL = 5   # a nickel is 5 cents
 # The original program calculated the value of some coins.
 
 # get input
-def cents_nums(cents):
+def cents_nums():
 
       print('We will convert coins to cents.')
 quarters = int(input('How many quarters? '))
@@ -29,14 +29,14 @@ cents = CENTS_PER_QUARTER * quarters \
       + pennies
 
 while True:
-      
+
       ask = input("Do you want to convert more coins? (y/n): ").strip().lower()
       if ask not in ("y", "yes"):
         break
       
-      # if quarters >= 0:
-      #       print(f"Do you want to convert more coins? (Enter y for yes):")
-      #       continue
+      if quarters >= 0 or dimes >= 0 or nickels >= 0 or pennies >= 0:
+            print(f"Do you want to convert more coins? (Enter y for yes):")
+            continue
       # elif dimes >= 0:
       #       print(f"Do you want to convert more coins? (Enter y for yes):")
       #       continue
@@ -46,8 +46,8 @@ while True:
       # elif pennies >= 0:
       #       print(f"Do you want to convert more coins? (Enter y for yes):")
       #       continue
-      # else: 
-      #       break
+      else: 
+            break
 
 # display the original coin quantities
 # and the calculated value.
