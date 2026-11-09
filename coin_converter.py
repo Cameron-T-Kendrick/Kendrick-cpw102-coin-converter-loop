@@ -19,7 +19,8 @@ while True:
       pennies = int(input('How many pennies? '))
       
       if quarters < 0 or dimes < 0 or nickels < 0 or pennies < 0:
-            continue
+            print("Can't have negitive numbers. \n Try again.")
+            break
       # process the input,
       # calculate the total value, in cents,
       # of the coins input by the user.
