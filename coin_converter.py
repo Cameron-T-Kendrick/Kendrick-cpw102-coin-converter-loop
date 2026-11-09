@@ -19,7 +19,7 @@ while True:
       pennies = int(input('How many pennies? '))
       
       if quarters < 0 or dimes < 0 or nickels < 0 or pennies < 0:
-            print("Can't have negitive numbers. \n Try again.")
+            print("Can't have negitive numbers.\nTry again.")
             break
       # process the input,
       # calculate the total value, in cents,
@@ -32,7 +32,11 @@ while True:
 
 
       
-
+      print( quarters, 'quarters',
+       dimes, 'dimes',
+       nickels, 'nickels',
+       pennies, 'pennies',
+       'is', cents, 'cents.')
 
       ask = input(f"Do you want to convert more coins? (Enter y for yes or n for no):").strip().lower() 
       if ask not in "y" or ask == "yes":
@@ -42,8 +46,8 @@ while True:
 
 # display the original coin quantities
 # and the calculated value.
-print( quarters, 'quarters',
-       dimes, 'dimes',
-       nickels, 'nickels',
-       pennies, 'pennies',
-       'is', cents, 'cents.')
+# print( quarters, 'quarters',
+#        dimes, 'dimes',
+#        nickels, 'nickels',
+#        pennies, 'pennies',
+#        'is', cents, 'cents.')
