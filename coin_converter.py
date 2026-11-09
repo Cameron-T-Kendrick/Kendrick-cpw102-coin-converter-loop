@@ -34,9 +34,12 @@ while True:
       if ask not in ("y", "yes"):
         break
       
-      if quarters >= 0 or dimes >= 0 or nickels >= 0 or pennies >= 0:
+      if quarters >= 0 and dimes >= 0 and nickels >= 0 and pennies >= 0:
             print(f"Do you want to convert more coins? (Enter y for yes):")
             continue
+      elif quarters < 0 and dimes < 0 and nickels < 0 and pennies < 0:
+            print("Coins can't be counted as negitives! Try again.")
+            break
       # elif dimes >= 0:
       #       print(f"Do you want to convert more coins? (Enter y for yes):")
       #       continue
