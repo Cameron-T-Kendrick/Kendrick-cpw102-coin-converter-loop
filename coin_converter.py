@@ -17,6 +17,9 @@ while True:
       quarters = int(input('How many quarters? '))
       if quarters < 0:
             quarters = 0
+            break 
+      elif quarters >= 0:
+            continue
       dimes = int(input('How many dimes? '))
       if dimes < 0:
             dimes = 0
@@ -25,7 +28,8 @@ while True:
             nickels = 0
       pennies = int(input('How many pennies? '))
       if pennies < 0:
-             pennies = 0    
+             pennies = 0 
+               
       
       if quarters < 0 or dimes < 0 or nickels < 0 or pennies < 0:
             print("Can't have negitive numbers.\nTry again.")
