@@ -8,6 +8,11 @@ CENTS_PER_QUARTER = 25 # a quarter is 25 cents
 CENTS_PER_DIME = 10    # a dime is 10 cents
 CENTS_PER_NICKEL = 5   # a nickel is 5 cents
 
+# total_quarters = 0
+# total_dimes = 0
+# total_nickels =0
+# total_pennies = 0
+
 # The original program calculated the value of some coins.
 
 # get input
@@ -30,7 +35,15 @@ while True:
             + CENTS_PER_NICKEL * nickels \
             + pennies
 
+      total_quarters = quarters
+      total_dimes = dimes
+      total_nickels = nickels
+      total_pennies = pennies
 
+      total_cents = CENTS_PER_QUARTER * total_quarters \
+            + CENTS_PER_DIME * total_dimes \
+            + CENTS_PER_NICKEL * total_nickels \
+            + total_pennies
       
       print( quarters, 'quarters',
        dimes, 'dimes',
@@ -39,6 +52,7 @@ while True:
        'is', cents, 'cents.')
 
       ask = input(f"Do you want to convert more coins? (Enter y for yes or n for no):").strip().lower() 
+      
       if ask not in "y" or ask == "yes":
             break 
 
